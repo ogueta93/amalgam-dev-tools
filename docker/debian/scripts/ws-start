@@ -1,0 +1,2 @@
+#!/bin/bash
+composer install && echo 'Server has been started' && (nohup php /app/bin/console ws:start >> /var/log/amalgam-websocket-server 2>&1 &)
