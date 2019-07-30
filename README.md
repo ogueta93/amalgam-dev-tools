@@ -1,6 +1,9 @@
 # Amalgam Dev Tools
 Amalgam Dev Tools is a project that was maked with the idea to facilitied the necesary tools to develop in  [Amalgam](https://github.com/ogueta93/amalgam) and [Amalgam Front](https://github.com/ogueta93/amalgam-front).
 
+- [Releases](https://github.com/ogueta93/amalgam-dev-tools/releases)
+
+
 ## Docker
 To establish all the develop environment a docker has been prepared. You need to install Docker and Docker Compose.
 
