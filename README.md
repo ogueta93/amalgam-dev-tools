@@ -26,7 +26,7 @@ MEMCACHED_PORT=11211
 ```
 
 #### Application Paths
-First of all, you need to clone [Amalgam](https://github.com/ogueta93/amalgam) and [Amalgam Front](https://github.com/ogueta93/amalgam-front). When the proyect are in your local machine you need to replace the text beteewn brackend and the brackedn includes with absolutes routes poingting the root folders.
+First of all, you need to clone [Amalgam](https://github.com/ogueta93/amalgam) and [Amalgam Front](https://github.com/ogueta93/amalgam-front). When the proyects are in your local machine you need to replace the text beteewn brackend and the brackedn includes with absolutes routes poingting the root folders.
 
 ```
 # APPLICATION
