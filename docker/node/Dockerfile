@@ -19,4 +19,4 @@ RUN touch /var/log/amalgam-front
 RUN apt-get autoremove -y && apt-get autoclean -y 
 
 # RUN APPLICATION
-CMD ["tail","-f","/var/log/amalgam-front"]
+CMD start ; tail -f /var/log/amalgam-front

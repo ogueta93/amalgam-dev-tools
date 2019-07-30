@@ -36,4 +36,4 @@ RUN apt-get autoremove -y \
     && apt-get autoclean -y 
 
 # RUN APPLICATION
-CMD ["tail","-f","/var/log/amalgam-websocket-server"]
+CMD ws-start ; tail -f /var/log/amalgam-websocket-server
