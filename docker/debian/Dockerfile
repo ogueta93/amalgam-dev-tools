@@ -6,6 +6,9 @@ USER root
 # Update repositories and install required package to start
 RUN apt-get update -y && apt-get upgrade -y && apt dist-upgrade -y
 
+# cron
+RUN apt-get -y install cron
+
 # PHP
 RUN apt-get -y install php libapache2-mod-php php-xml php-curl php-memcached php-intl php-mysql
 
@@ -31,9 +34,14 @@ RUN chmod +x /bin/ws-start /bin/ws-restart /bin/ws-stop
 # Logs
 RUN touch /var/log/amalgam-websocket-server
 
+# Crontab
+COPY crontab/* /etc/cron.d/
+RUN chmod 0644 /etc/cron.d/*
+RUN crontab /etc/cron.d/amalgam_crontab
+
 # Clean
 RUN apt-get autoremove -y \
     && apt-get autoclean -y 
 
 # RUN APPLICATION
-CMD ws-start ; tail -f /var/log/amalgam-websocket-server
+CMD cron ; ws-start ; tail -f /var/log/amalgam-websocket-server
