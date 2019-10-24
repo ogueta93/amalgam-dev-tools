@@ -99,3 +99,20 @@ docker exec -it amalgam_front restart
 # Stops the application
 docker exec -it amalgam_front stop
 ```
+
+### Quick use configuration
+The basic information for the configuration files on both applications to run the app successfully.
+
+#### 1. Amalgam proyect => config/packages/dev/doctrine.yaml
+```
+doctrine:
+    dbal:
+        url: mysql://amalgam:amalgam@amalgam_mariadb:3306/amalgam
+```
+
+#### 2. Amalgam Frontend proyect => .env
+```
+VUE_APP_ENVIRONMENT=dev
+VUE_APP_TITLE=Amalgan
+VUE_APP_WEBSOCKET_URL=ws://localhost:8080
+```
